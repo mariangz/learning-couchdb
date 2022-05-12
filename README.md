@@ -2,7 +2,7 @@
 
 ### What is CouchDB
 
-CouchDB is an open-source NoSQL database, which store documents. CouchDB is not a Relational Database Management System (RDBMS)
+CouchDB is an open-source NoSQL database, which store documents and implemented in Erlang. CouchDB is not a Relational Database Management System (RDBMS)
 and it doesn't use the Structured Query Language (SQL).
 
 ### When we should use it?
@@ -16,8 +16,7 @@ and it doesn't use the Structured Query Language (SQL).
 
 ### Features:
 
-- Schema Free (JSON): unlike a relational database, a CouchDB database doesn't store data and relationships in tables. Instead, each database is a **collection** of independent **documents**. What we are saving are JSON files. But CouchDB will add them an `_id` (to identify them, it also acts as the primary key for the
-  database that holds the document) and a `_rev` (to know the version of this file, when it was last modified, similar to git). Example:
+- Schema Free (JSON): unlike a relational database, a CouchDB database doesn't store data and relationships in tables. Instead, each database is a **collection** of independent **documents**. What we are saving are JSON files because of that we don’t need any additional layer like an Object-Relational Mapping (ORM).But CouchDB will add them an `_id` (to identify them, it also acts as the primary key for the database that holds the document) and a `_rev` (to know the version of this file, when it was last modified, similar to git). Example:
 
 ```javascript
 {
