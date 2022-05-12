@@ -2,7 +2,8 @@
 
 ### What is CouchDB
 
-CouchDB is an open-source NoSQL database, which store documents.
+CouchDB is an open-source NoSQL database, which store documents. CouchDB is not a Relational Database Management System (RDBMS)
+and it doesn't use the Structured Query Language (SQL).
 
 ### When we should use it?
 
