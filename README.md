@@ -1,22 +1,27 @@
 # CouchDB Workshop
 
+- Related concepts I learned about:
+  - cluster: a computer cluster is a set of computers that work together so that they can be viewed as a single system. 
+  - redundancy: data redundancy occurs when the same piece of data is stored in two or more separate places. 
+  - latency: also called ping, refers to several kinds of delays typically incurred in the processing of network data. A low-latency network connection experiences small delay times, while a high-latency connection experiences long delays.
+  
+  
 ### What is CouchDB
 
-CouchDB is an open-source NoSQL database, which store documents and implemented in Erlang. CouchDB is not a Relational Database Management System (RDBMS)
-and it doesn't use the Structured Query Language (SQL).
+CouchDB is an open-source NoSQL database, which store documents and implemented in Erlang. CouchDB is not a Relational Database Management System (RDBMS) and it doesn't use the Structured Query Language (SQL).
 
 ### When we should use it?
 
 - General Purpose Data: we can use it in different kinds of applications, including data science, internet, financial, etc.
 - Scalable big-data cluster:
-  - store a lot of data: CouchDB allows us to create a _cluster_ (group of computer that work together) that acts as a single database, but also it allows us to use the storage capacity of all the servers combined.
+  - store a lot of data: CouchDB allows us to create a _cluster_ that acts as a single database, but also it allows us to use the storage capacity of all the servers combined.
   - high availability: CouchDB clustering comes with _double redundancy_ built-in, that means if we have two server all the data will be duplicated with the intention of increasing reliability, so that if we lose a server, we can still access all of our data.
-  - lot of requests: the clustering system allow us to spread the load across as many server we want and also we can add or remove servers to or from the cluster without any service interruption;
+  - lot of requests: the clustering system allow us to spread the load across as many server we want and also we can add or remove servers to or from the cluster without any service interruption.
 - Seamless Data Synchronisation: it's possible replicate data from one server to another located on another continent and now we have an up-to-date copy of our data here as well. And this works bi-directionally so it adds more fault tolerance, high availability and also lower latency as we can direct our user to the nearest server.
 
 ### Features:
 
-- Schema Free (JSON): unlike a relational database, a CouchDB database doesn't store data and relationships in tables. Instead, each database is a **collection** of independent **documents**. What we are saving are JSON files because of that we don’t need any additional layer like an Object-Relational Mapping (ORM).But CouchDB will add them an `_id` (to identify them, it also acts as the primary key for the database that holds the document) and a `_rev` (to know the version of this file, when it was last modified, similar to git). Example:
+- Schema Free (JSON): unlike a relational database, a CouchDB database doesn't store data and relationships in tables. Instead, each database is a **collection** of independent **documents**. What we are saving are JSON files because of that we don’t need any additional layer like an Object-Relational Mapping (ORM). But CouchDB will add them an `_id` (to identify them, it also acts as the primary key for the database that holds the document) and a `_rev` (to know the version of this file, when it was last modified, similar to git). Example:
 
 ```javascript
 {
