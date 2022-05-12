@@ -51,5 +51,3 @@ and it doesn't use the Structured Query Language (SQL).
 
 }
 ```
-
-- Replication
