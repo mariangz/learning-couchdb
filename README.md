@@ -9,7 +9,7 @@ and it doesn't use the Structured Query Language (SQL).
 
 - General Purpose Data: we can use it in different kinds of applications, including data science, internet, financial, etc.
 - Scalable big-data cluster:
-  - store a lot of data: CouchDB allows us to create a _cluster_ (group of computer that work together) that acts as a single database, but also it allows you to use the storage capacity of all the servers combined.
+  - store a lot of data: CouchDB allows us to create a _cluster_ (group of computer that work together) that acts as a single database, but also it allows us to use the storage capacity of all the servers combined.
   - high availability: CouchDB clustering comes with _double redundancy_ built-in, that means if we have two server all the data will be duplicated with the intention of increasing reliability, so that if we lose a server, we can still access all of our data.
   - lot of requests: the clustering system allow us to spread the load across as many server we want and also we can add or remove servers to or from the cluster without any service interruption;
 - Seamless Data Synchronisation: it's possible replicate data from one server to another located on another continent and now we have an up-to-date copy of our data here as well. And this works bi-directionally so it adds more fault tolerance, high availability and also lower latency as we can direct our user to the nearest server.
