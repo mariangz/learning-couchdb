@@ -4,7 +4,7 @@
   - cluster: a computer cluster is a set of computers that work together so that they can be viewed as a single system. 
   - redundancy: data redundancy occurs when the same piece of data is stored in two or more separate places. 
   - latency: also called ping, refers to several kinds of delays typically incurred in the processing of network data. A low-latency network connection experiences small delay times, while a high-latency connection experiences long delays.
-  - cURL: which stands for client URL, is a command line tool that developers use to transfer data to and from a server. It supports several different protocols, including HTTP and HTTPS, and runs on almost every platform. We can use it to interact with different APIs.
+  - cURL: which stands for _client URL_, is a command line tool that developers use to transfer data to and from a server. It supports several different protocols, including HTTP and HTTPS, and runs on almost every platform. We can use it to interact with different APIs.
   
   
 ### What is CouchDB
