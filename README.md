@@ -37,7 +37,7 @@ and it doesn't use the Structured Query Language (SQL).
 - RESTful HTTP API: we can communicate with a RESTful API to manipulate our documents. We can do it using `curl` and HTTP request, actually any and all communication from and to CouchDB is done over HTTP.
   Example, if I want to update my data (PUT - UPDATE):
   `curl -X PUT http://127.0.0.1:5984/marian-documents/01`
-  `d {`
+  `-d {`
   `"id":01`,
   `"type": "note"`
   `}`
