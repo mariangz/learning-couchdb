@@ -1,12 +1,11 @@
 # CouchDB Workshop
 
 - Related concepts I learned about:
-  - cluster: a computer cluster is a set of computers that work together so that they can be viewed as a single system. 
-  - redundancy: data redundancy occurs when the same piece of data is stored in two or more separate places. 
+  - cluster: a computer cluster is a set of computers that work together so that they can be viewed as a single system.
+  - redundancy: data redundancy occurs when the same piece of data is stored in two or more separate places.
   - latency: also called ping, refers to several kinds of delays typically incurred in the processing of network data. A low-latency network connection experiences small delay times, while a high-latency connection experiences long delays.
   - cURL: which stands for _client URL_, is a command line tool that developers use to transfer data to and from a server. It supports several different protocols, including HTTP and HTTPS, and runs on almost every platform. We can use it to interact with different APIs.
-  
-  
+
 ### What is CouchDB
 
 CouchDB is an open-source NoSQL database, which store documents and implemented in Erlang. CouchDB is not a Relational Database Management System (RDBMS) and it doesn't use the Structured Query Language (SQL).
@@ -39,7 +38,6 @@ CouchDB is an open-source NoSQL database, which store documents and implemented 
 
 - Document Oriented NoSQL: document fields are **uniquely named**, contain values of varying types (text, number, boolean, lists, etc), and there is no set limit to text size or element count (CouchDB provides a RESTful HTTP API for reading and updating them). So, every time we want to group data we have to do it within a collection in a JSON format called documents. And we can treat them like in the real world because real-world data is managed as real-world-document, what does it mean? We can dump our data as it appears in our real-life document, we don't need all the documents in that collection to have the same fields or we don't have to think about adding more, so there is no need (like in SQL) to write in some fields 'none' or 'unknown', we can just ignore it. Think of a business card or an invoice, they are different from each other, and we just have to add them as we find them. So all the information we need from them, they already have, we call this **'self-contained'** data.
 
-
 - RESTful HTTP API: we can communicate with a RESTful API to manipulate our documents. We can do it using `curl` and HTTP request, actually any and all communication from and to CouchDB is done over HTTP.
   Example, if I want to update my data (PUT - UPDATE):
   `curl -X PUT http://127.0.0.1:5984/marian-documents/01`
@@ -57,3 +55,9 @@ CouchDB is an open-source NoSQL database, which store documents and implemented 
 
 }
 ```
+
+#### Commands
+
+- Creating a db: `curl -X PUT http://admin:password@127.0.0.1:5984/nameOfDatabe`
+- Retrieving the list of dbs: `curl -X GET http://admin:password@127.0.0.1:5984/_all_dbs`
+- Deleting a db: `curl -X DELETE http://admin:password@127.0.0.1:5984/nameOfDatabe`
