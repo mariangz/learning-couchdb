@@ -56,8 +56,39 @@ CouchDB is an open-source NoSQL database, which store documents and implemented 
 }
 ```
 
-#### Commands
+#### Working in the command-line
 
-- Creating a db: `curl -X PUT http://admin:password@127.0.0.1:5984/nameOfDatabe`
-- Retrieving the list of dbs: `curl -X GET http://admin:password@127.0.0.1:5984/_all_dbs`
-- Deleting a db: `curl -X DELETE http://admin:password@127.0.0.1:5984/nameOfDatabe`
+- Create a db: `curl -X PUT http://admin:password@127.0.0.1:5984/nameOfDatabe`
+- Retrive the list of dbs: `curl -X GET http://admin:password@127.0.0.1:5984/_all_dbs`
+- Delete a db: `curl -X DELETE http://admin:password@127.0.0.1:5984/nameOfDatabe`
+
+#### What is Fauxton?
+
+It's the built-in administration interface. It provides full access to all of CouchDB’s features and makes it easy to work with some of the more complex ideas involved.
+To load Faxton in our browser, we should visit: `http://127.0.0.1:5984/_utils/` (after that, we have to run the test suite to verify that everything is working ok).
+
+- Create a db: click `Create Database` and enter the name.
+- Create a document: `New Doc` (CouchDB will generate a UUID, but we should assign our own UUIDs).
+
+#### Mango Query¶
+
+There are always two parts to a Mango Query: the index and the selector.
+
+- the index: specifies which fields we want to be able to query on.
+- the selector: includes the actual query parameters that define what we are looking for exactly.
+
+- Create a Mango Index, example: to find a movie by its release year,
+
+```js
+  {
+    "index": {
+      "fields": [
+          "year"
+        ]
+      },
+      "name": "year-json-index",
+      "type": "json"
+  }
+```
+
+This defines an index on the field year and allows us to send queries for documents from a specific year.
